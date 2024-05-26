@@ -1,14 +1,14 @@
 const currencies = [
-	{ code: "USD", Rate: 12700 },
-	{ code: "EUR", Rate: 13700 },
-	{ code: "SUM", Rate: 1 },
-	{ code: "RUB", Rate: 140 },
-	{ code: "GBP", Rate: 16200 },
-	{ code: "JPY", Rate: 95 },
-	{ code: "AUD", Rate: 7500 },
-	{ code: "CAD", Rate: 8500 },
-	{ code: "CHF", Rate: 11500 },
-	{ code: "CNY", Rate: 1600 },
+	{ code: "USD", buyRate: 12640, sellRate: 12700 },
+	{ code: "EUR", buyRate: 13500, sellRate: 13700 },
+	{ code: "SUM", buyRate: 1, sellRate: 1 },
+	{ code: "RUB", buyRate: 132, sellRate: 140 },
+	{ code: "GBP", buyRate: 1578, sellRate: 16200 },
+	{ code: "JPY", buyRate: 80, sellRate: 95 },
+	{ code: "AUD", buyRate: 7200, sellRate: 7500 },
+	{ code: "CAD", buyRate: 8000, sellRate: 8500 },
+	{ code: "CHF", buyRate: 11000, sellRate: 11500 },
+	{ code: "CNY", buyRate: 1550, sellRate: 1600 },
 ];
 
 // Load initial data to localStorage if not present
@@ -16,7 +16,6 @@ if (!localStorage.getItem("currencyRates")) {
 	localStorage.setItem("currencyRates", JSON.stringify(currencies));
 }
 
-// Populate select elements with currency options
 function populateSelects() {
 	const fromCurrency = document.getElementById("fromCurrency");
 	const toCurrency = document.getElementById("toCurrency");
@@ -34,7 +33,6 @@ function populateSelects() {
 	});
 }
 
-// Exchange currency
 function exchangeCurrency() {
 	const fromCurrency = document.getElementById("fromCurrency").value;
 	const toCurrency = document.getElementById("toCurrency").value;
@@ -63,7 +61,6 @@ function exchangeCurrency() {
 	)} ${toCurrency}`;
 }
 
-// Initialize the application
 document.addEventListener("DOMContentLoaded", () => {
 	populateSelects();
 });
@@ -90,7 +87,6 @@ function updateRates() {
 	alert("Kurs yangilandi.");
 }
 
-// Initialize the application
 document.addEventListener("DOMContentLoaded", () => {
 	populateSelects();
 });
