@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Your site name</title>
+	</head>
+	<body>
+		<!-- Site Header start -->
+		<header class="site-header">
+			<!-- <div class="container"> -->
+				<div class="header">
+					<!-- ... -->
+				</div>
+			</div>
+		</header>
+		<!-- Site Header end -->
+		<!-- Site Main start -->
+		<main class="site-main">
+			<section class="hero-section">
+				<div class="container">
+					<div class="hero">
+						<h1>Valyuta Ayirboshlash</h1>
+						<div class="exchange-section">
+							<label for="fromCurrency">From:</label>
+							<select id="fromCurrency"></select>
+
+							<label for="toCurrency">To:</label>
+							<select id="toCurrency"></select>
+
+							<label for="amount">Amount:</label>
+							<input type="number" id="amount" placeholder="Enter amount" />
+
+							<button onclick="exchangeCurrency()">Exchange</button>
+						</div>
+
+						<div class="result-section">
+							<h2>Natija</h2>
+							<p id="result"></p>
+						</div>
+
+                        <div class="update-section">
+                            <h2>Valyuta Kursini Yangilash</h2>
+                            <label for="updateCurrency">Valyuta:</label>
+                            <select id="updateCurrency"></select>
+                
+                            <label for="buyRate">Sotib Olish Kursi:</label>
+                            <input type="number" id="buyRate" placeholder="Enter buy rate">
+                
+                            <label for="sellRate">Sotish Kursi:</label>
+                            <input type="number" id="sellRate" placeholder="Enter sell rate">
+                
+                            <button onclick="updateRates()">Yangilash</button>
+                        </div>
+
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Site Main end -->
+		<!-- Site Footer start -->
+		<footer class="site-footer">
+			<!-- <div class="container"> -->
+				<div class="footer">
+					<!-- ... -->
+				</div>
+			</div>
+		</footer>
+		<!-- Site Footer end -->
+		<script src="./js/app.js"></script>
+	</body>
+</html>
